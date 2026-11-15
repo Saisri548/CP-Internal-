@@ -1,0 +1,26 @@
+﻿
+@page
+@model IndexModel
+
+<h2>Azure Queue Storage - Message Form</h2>
+
+<form method="post">
+    <label>Enter Message:</label>
+    <input asp-for="Message" />
+
+    <br /><br />
+
+    <button type="submit" asp-page-handler="Insert">
+        Insert Message
+    </button>
+
+    <button type="submit" asp-page-handler="Get">
+        Get Message
+    </button>
+</form>
+
+<br />
+
+<label>Result:</label>
+
+<textarea rows="5" cols="50" readonly>@Model.Result</textarea>
